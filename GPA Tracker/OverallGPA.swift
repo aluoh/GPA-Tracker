@@ -27,7 +27,7 @@ public class OverallGPA {
     }
     
     func updateGPAFromCurrentData(currentSem: tempSemester) {
-        // Iterate through table cell, grab GPA, update it with cum GPA
+        // Iterate through table view, grab GPA, update it with cumulative GPA
         // The tempSemester itself should have a auto calculated GPA
         cumulativeGPA = (cumulativeGPA + currentSem.gpa) / 2
     }
