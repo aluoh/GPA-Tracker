@@ -20,11 +20,16 @@ class MainViewController: UIViewController {
     }
     
     func setupOverallGPALabel() {
+        
+        var s1 = tempSemester(name: "Fall 2018", gpa: 3.93)
+        var s2 = tempSemester(name: "Spring 2018", gpa: 3.85)
+        CurrentData.shared.addSemester(semester: s1)
+        CurrentData.shared.addSemester(semester: s2)
         let overallGPALabel = UILabel(frame: CGRect(x: 85, y: 49, width: 205, height: 40))
         overallGPALabel.font = UIFont(name: "SFProDisplay", size: 34)
         overallGPALabel.font = UIFont.systemFont(ofSize: 34, weight: UIFont.Weight.semibold)
         overallGPALabel.textAlignment = .center
-        overallGPALabel.text = "Overall: " + String(overallGPA.cumulativeGPA)
+        overallGPALabel.text = "Overall: " + String(CurrentData.shared.getGPA(atIndex: 0))
         overallGPALabel.textColor = .white
         self.view.addSubview(overallGPALabel)
     }

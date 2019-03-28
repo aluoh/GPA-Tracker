@@ -19,19 +19,21 @@ class CurrentData {
     
     
     public func addSemester(semester: tempSemester) {
-        
+        currentSemesters.append(semester)
     }
     
     public func removeSemester(atIndex: Int) {
-        
+        currentSemesters.remove(at: atIndex)
     }
     
     public func getOverall() -> Double {
-        return 0
+        let overall = OverallGPA()
+        overall.calcCumulativeGPA(semesters: currentSemesters)
+        return overall.cumulativeGPA
     }
     
     public func getGPA(atIndex: Int) -> Double {
-        return 0
+        return currentSemesters[atIndex].gpa
     }
     
     /* from storage
@@ -45,6 +47,6 @@ class CurrentData {
      */
     
     public func clear() {
-        
+        currentSemesters.removeAll()
     }
 }
