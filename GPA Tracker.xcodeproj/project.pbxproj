@@ -17,6 +17,7 @@
 		44B3C67B6A6B24CF8F790FCE /* Pods_GPA_TrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86C42B3B034FF6BDD35AC65F /* Pods_GPA_TrackerUITests.framework */; };
 		9614A5FF224A876E008D76EC /* OverallGPA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9614A5FE224A876E008D76EC /* OverallGPA.swift */; };
 		9614A601224AC246008D76EC /* Semester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9614A600224AC246008D76EC /* Semester.swift */; };
+		969B0857224D3A5000BCF93D /* CurrentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969B0856224D3A5000BCF93D /* CurrentData.swift */; };
 		96D9DECB2239B9E3005EF093 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D9DECA2239B9E3005EF093 /* Course.swift */; };
 		B69D36040BFE23CCD026B23A /* Pods_GPA_TrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B95C7797A83957736B80CB2 /* Pods_GPA_TrackerTests.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,7 @@
 		86C42B3B034FF6BDD35AC65F /* Pods_GPA_TrackerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GPA_TrackerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9614A5FE224A876E008D76EC /* OverallGPA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverallGPA.swift; sourceTree = "<group>"; };
 		9614A600224AC246008D76EC /* Semester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Semester.swift; sourceTree = "<group>"; };
+		969B0856224D3A5000BCF93D /* CurrentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentData.swift; sourceTree = "<group>"; };
 		96D9DECA2239B9E3005EF093 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = SOURCE_ROOT; };
 		9C3E32470744BEF847BB4DF8 /* Pods-GPA Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPA Tracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GPA Tracker/Pods-GPA Tracker.debug.xcconfig"; sourceTree = "<group>"; };
 		AAF299985BE57DD2FCABA8FA /* Pods_GPA_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GPA_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +122,7 @@
 			children = (
 				96D9DECA2239B9E3005EF093 /* Course.swift */,
 				22F09762220BDD0E009881F8 /* AppDelegate.swift */,
+				969B0856224D3A5000BCF93D /* CurrentData.swift */,
 				9614A5FE224A876E008D76EC /* OverallGPA.swift */,
 				9614A600224AC246008D76EC /* Semester.swift */,
 				22F09792220BDDE8009881F8 /* Controller */,
@@ -406,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9614A5FF224A876E008D76EC /* OverallGPA.swift in Sources */,
+				969B0857224D3A5000BCF93D /* CurrentData.swift in Sources */,
 				96D9DECB2239B9E3005EF093 /* Course.swift in Sources */,
 				22F09765220BDD0E009881F8 /* MainViewController.swift in Sources */,
 				9614A601224AC246008D76EC /* Semester.swift in Sources */,
