@@ -12,13 +12,14 @@ public class tempSemester {
     var name: String
     var gpa: Double
     var classes: [Course]
-    init(name: String, gpa: Double, classes: [Course]) {
+    init(name: String, gpa: Double) {
         self.name = name
         self.gpa = gpa
-        self.classes = classes
+        classes = []
     }
     
     func addClass(theCourse: Course) {
+        // if called, update GPA
         classes.append(theCourse)
     }
     
@@ -27,9 +28,5 @@ public class tempSemester {
         if indexOfClass != nil {
             classes.remove(at: indexOfClass)
         }
-    }
-    
-    func getClasses() -> [Course] {
-        return classes
     }
 }
