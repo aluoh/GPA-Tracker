@@ -18,6 +18,7 @@
 		9614A5FF224A876E008D76EC /* OverallGPA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9614A5FE224A876E008D76EC /* OverallGPA.swift */; };
 		9614A601224AC246008D76EC /* Semester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9614A600224AC246008D76EC /* Semester.swift */; };
 		969B0857224D3A5000BCF93D /* CurrentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969B0856224D3A5000BCF93D /* CurrentData.swift */; };
+		96A099FB22631565000D3426 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A099FA22631565000D3426 /* DataStorage.swift */; };
 		96E848C82252CEDD0042BA81 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E848C72252CEDD0042BA81 /* Course.swift */; };
 		B69D36040BFE23CCD026B23A /* Pods_GPA_TrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B95C7797A83957736B80CB2 /* Pods_GPA_TrackerTests.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		9614A5FE224A876E008D76EC /* OverallGPA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverallGPA.swift; sourceTree = "<group>"; };
 		9614A600224AC246008D76EC /* Semester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Semester.swift; sourceTree = "<group>"; };
 		969B0856224D3A5000BCF93D /* CurrentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentData.swift; sourceTree = "<group>"; };
+		96A099FA22631565000D3426 /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
 		96E848C72252CEDD0042BA81 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		9C3E32470744BEF847BB4DF8 /* Pods-GPA Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPA Tracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GPA Tracker/Pods-GPA Tracker.debug.xcconfig"; sourceTree = "<group>"; };
 		AAF299985BE57DD2FCABA8FA /* Pods_GPA_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GPA_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +125,7 @@
 				96E848C72252CEDD0042BA81 /* Course.swift */,
 				22F09762220BDD0E009881F8 /* AppDelegate.swift */,
 				969B0856224D3A5000BCF93D /* CurrentData.swift */,
+				96A099FA22631565000D3426 /* DataStorage.swift */,
 				9614A5FE224A876E008D76EC /* OverallGPA.swift */,
 				9614A600224AC246008D76EC /* Semester.swift */,
 				22F09792220BDDE8009881F8 /* Controller */,
@@ -217,6 +220,7 @@
 				22F0975B220BDD0E009881F8 /* Sources */,
 				22F0975C220BDD0E009881F8 /* Frameworks */,
 				22F0975D220BDD0E009881F8 /* Resources */,
+				4F3033F6A9E9545F5FFC7D4E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -357,6 +361,30 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4F3033F6A9E9545F5FFC7D4E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GPA Tracker/Pods-GPA Tracker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Disk/Disk.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Disk.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GPA Tracker/Pods-GPA Tracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		97EC3AB5A7D38F386B5BB118 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -413,6 +441,7 @@
 				969B0857224D3A5000BCF93D /* CurrentData.swift in Sources */,
 				22F09765220BDD0E009881F8 /* MainViewController.swift in Sources */,
 				9614A601224AC246008D76EC /* Semester.swift in Sources */,
+				96A099FB22631565000D3426 /* DataStorage.swift in Sources */,
 				22F09763220BDD0E009881F8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
