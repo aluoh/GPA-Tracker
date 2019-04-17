@@ -7,8 +7,17 @@
 //
 
 struct DataStorage: Codable {
-    let overallGPA: Double
-    let currentSemesterGPA: Double
-    let allSemesterGPA: [Double]
-    let semesters: [String] // Should contain all Course Names, Semester Name, and Grade Weights, MAYBE the GPA in here as a String and retrieve as a double
+    var overallGPA: Double
+    var currentSemesterGPA: Double
+    var currentSemester: tempSemester
+    var allSemesters: [tempSemester]
+    // Should contain all Course Names, Semester Name, and Grade Weights, MAYBE the GPA in here as a String and retrieve as a double
+    var courses: [Course]
+    init(){
+        overallGPA = 0
+        currentSemesterGPA = 0
+        allSemesters = []
+        currentSemester = tempSemester()
+        courses = []
+    }
 }

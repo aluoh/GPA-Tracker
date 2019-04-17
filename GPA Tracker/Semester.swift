@@ -8,13 +8,13 @@
 
 import Foundation
 
-public class tempSemester {
+public class tempSemester: Codable {
     var name: String
     var gpa: Double
     var classes: [Course]
-    init(name: String, gpa: Double) {
-        self.name = name
-        self.gpa = gpa
+    init() {
+        gpa = 0
+        name = ""
         classes = []
     }
     
