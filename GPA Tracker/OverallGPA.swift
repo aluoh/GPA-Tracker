@@ -18,12 +18,17 @@ public class OverallGPA {
     // Need a label to display Overall GPA
     
     func calcCumulativeGPA(semesters: [tempSemester]) {
-        var sumOfSemesterGPA: Double = 0
-        // Adds each gpa value from semester GPA to the overall GPA sum,
-        for semester in semesters {
-            sumOfSemesterGPA += semester.gpa
+        if semesters.count == 1 {
+            cumulativeGPA = semesters[0].gpa
         }
-        cumulativeGPA = sumOfSemesterGPA / Double(semesters.count)
+        else {
+            var sumOfSemesterGPA: Double = 0
+            // Adds each gpa value from semester GPA to the overall GPA sum,
+            for semester in semesters {
+                sumOfSemesterGPA += semester.gpa
+            }
+            cumulativeGPA = sumOfSemesterGPA / Double(semesters.count)
+        }
     }
     
     func updateGPAFromCurrentData(currentSem: tempSemester) {
