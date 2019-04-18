@@ -21,8 +21,10 @@ class MainViewController: UIViewController {
     
     func setupOverallGPALabel() {
         
-        var s1 = tempSemester(name: "Fall 2018", gpa: 3.93)
-        var s2 = tempSemester(name: "Spring 2018", gpa: 3.85)
+        var s1 = tempSemester()
+        var s2 = tempSemester()
+        s1.name = "Fall 2019"
+        s2.name = "Spring 2019"
         CurrentData.shared.addSemester(semester: s1)
         CurrentData.shared.addSemester(semester: s2)
         let overallGPALabel = UILabel(frame: CGRect(x: 85, y: 49, width: 205, height: 40))

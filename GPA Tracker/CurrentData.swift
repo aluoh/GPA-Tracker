@@ -11,12 +11,12 @@ import Disk
 
 class CurrentData {
     private var currentSemesters: [tempSemester]
-    private var dataToStore = [DataStorage]()
-    var data: DataStorage
+    // private var dataToStore = [DataStorage]() // Not needed as we just add currentSemesters instead
+    // var data: DataStorage
 
     private init() {
         currentSemesters = []
-        data = DataStorage()
+        // data = DataStorage()
     }
 
     
@@ -28,29 +28,36 @@ class CurrentData {
       //  data.courses = semester.classes
       //  dataToStore.append(data)
         currentSemesters.append(semester)
-        data.allSemesters.append(semester)
-        data.courses = semester.classes
     }
     
     public func removeSemester(atIndex: Int) {
         currentSemesters.remove(at: atIndex)
-        data.allSemesters.remove(at: atIndex)
+        // data.allSemesters.remove(at: atIndex)
     }
     
     public func getOverall() -> Double {
         let overall = OverallGPA()
         overall.calcCumulativeGPA(semesters: currentSemesters)
-        data.overallGPA = overall.cumulativeGPA
         return overall.cumulativeGPA
     }
     
     public func getGPA(atIndex: Int) -> Double {
-        data.currentSemesterGPA = currentSemesters[atIndex].gpa
         return currentSemesters[atIndex].gpa
     }
     
     public func load() {
         // To load, use Disk.retrieve ...
+        do {
+            try Disk.retrieve("currentSemesters.json", from: .documents, as: [tempSemester].self)
+        } catch let error as NSError {
+            fatalError("""
+                Domain: \(error.domain)
+                Code: \(error.code)
+                Description: \(error.localizedDescription)
+                Failure Reason: \(error.localizedFailureReason ?? "")
+                Suggestions: \(error.localizedRecoverySuggestion ?? "")
+                """)
+        }
     }
      // Will call on the AppDelegate on exit
     
@@ -58,8 +65,7 @@ class CurrentData {
         // To use, use Disk.save ...
         
         do {
-            addToDataStorage() // Updates the DataStorage before storing
-            try Disk.save(self.dataToStore, to: .documents, as: "data.json") // Attempts to save to document
+            try Disk.save(self.currentSemesters, to: .documents, as: "currentSemesters.json") // Attempts to save to document
         } catch let error as NSError {
             fatalError("""
                 Domain: \(error.domain)
@@ -73,10 +79,5 @@ class CurrentData {
     
     public func clear() {
         currentSemesters.removeAll()
-        data.allSemesters.removeAll()
-    }
-    
-    private func addToDataStorage() {
-        dataToStore.append(data)
     }
 }
