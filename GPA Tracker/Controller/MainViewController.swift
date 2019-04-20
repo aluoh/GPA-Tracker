@@ -11,7 +11,9 @@ import UIKit
 class MainViewController: UIViewController {
 
     var overallGPA = OverallGPA()
-
+    var semester1 = tempSemester()
+    var semester2 = tempSemester()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +26,7 @@ class MainViewController: UIViewController {
         overallGPALabel.font = UIFont(name: "SFProDisplay", size: 34)
         overallGPALabel.font = UIFont.systemFont(ofSize: 34, weight: UIFont.Weight.semibold)
         overallGPALabel.textAlignment = .center
-        overallGPALabel.text = "Overall: " + String(overallGPA.cumulativeGPA)
+        overallGPALabel.text = "Overall: " + String(overallGPA.cumulativeGPA) // Call it by overallGPA.calculateCumulativeGPA([tempSemester])
         overallGPALabel.textColor = .white
         self.view.addSubview(overallGPALabel)
     }
